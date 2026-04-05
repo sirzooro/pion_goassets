@@ -5,7 +5,7 @@ name: Sync Assets to ci-sandbox
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   sync:
     runs-on: ubuntu-24.04

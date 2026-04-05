@@ -6,7 +6,7 @@ on:
   workflow_call:
     inputs:
       goassets-ref:
-        default: master
+        default: main
         required: false
         type: string
 

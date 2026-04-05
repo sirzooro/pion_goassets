@@ -101,7 +101,7 @@ func main() {
 
 	base_ref, has_base_ref := os.LookupEnv("GITHUB_BASE_REF")
 	if !has_base_ref {
-		base_ref = "master"
+		base_ref = "main"
 	}
 	git_proc := exec.Command("git", "rev-list", "--no-merges", fmt.Sprintf("origin/%s..", base_ref))
 	out, err := git_proc.Output()
