@@ -5,6 +5,10 @@ name: Lint (reusable)
 on:
   workflow_call:
     inputs:
+      golangci-lint-version:
+        default: v2.10.1
+        required: false
+        type: string
       goassets-ref:
         default: main
         required: false
@@ -69,5 +73,5 @@ jobs:
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v9
         with:
-          version: v2.10.1
+          version: ${{ inputs.golangci-lint-version }}
           args: $GOLANGCI_LINT_EXRA_ARGS
